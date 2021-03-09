@@ -1,24 +1,78 @@
 
 .App
 {
-  background: #28294c;
+  /* background: #28294c ; */
+  /* opacity: 0.1; */
   padding: 1rem ;
-  margin: 6rem 11rem 0rem 11rem;
-  height: 37.8rem;
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
-  box-shadow: 2px 2px 15px 0.1px #111;
+  /* margin: 3rem 11rem 10rem 11rem; */
+  /* height: 37.8rem; */
+  z-index: 10;
+  /* transition: opacity 250ms ease-in; */
+ /* border-radius: 1.5rem; */
+  /* box-shadow: 2px 2px 15px 0.1px #111; */
+}
+  /* }
+.App:hover{
+  opacity: 0.9;
+} */
+#myVideo {
+  position: fixed;
+  right: 0;
+  z-index: -1;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 #navlogo
 {
   color: #eeeeee;
 }
-#hlink{color: #ddd  !important;
+#hlink{color: #fef  !important;
 font-size: 1.2rem;
-margin-left: 45rem;
+margin-left: 65rem;
 }
 Nav button{
   color: #eee;
   position: absolute;
   right: 1rem;
+}
+.c1{
+  margin-top: 5rem;
+  margin-left: 10rem;
+  padding: 0.5rem;
+}
+#img1
+{
+  width: 80%;
+  margin-top: 5rem;
+}
+.para1
+{
+  color: #ccc;
+  font-weight: 350;
+  padding-top: 2rem;
+  margin: 1rem 0rem;
+  padding-bottom: 2rem
+}
+.text1{
+  color:#fefefe;
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 4.5rem;
+}
+Button{
+  background-color: orange !important;
+  transition: background-color linear 500ms !important;
+  transition: outline-offset 250ms ease !important;
+  outline: 2px solid orange !important;
+  border-radius: 0px !important;
+  border: none !important;
+}
+Button:hover{
+  
+
+  outline-offset: 2px !important;
+}
+Button:focus{
+  background-color: darkorange !important;
 }
