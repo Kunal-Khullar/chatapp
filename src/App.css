@@ -1,20 +1,12 @@
 
 .App
 {
-  /* background: #28294c ; */
-  /* opacity: 0.1; */
   padding: 1rem ;
-  /* margin: 3rem 11rem 10rem 11rem; */
-  /* height: 37.8rem; */
+
   z-index: 10;
-  /* transition: opacity 250ms ease-in; */
- /* border-radius: 1.5rem; */
-  /* box-shadow: 2px 2px 15px 0.1px #111; */
+
 }
-  /* }
-.App:hover{
-  opacity: 0.9;
-} */
+ 
 #myVideo {
   position: fixed;
   right: 0;
@@ -29,12 +21,8 @@
 }
 #hlink{color: #fef  !important;
 font-size: 1.2rem;
-margin-left: 65rem;
-}
-Nav button{
-  color: #eee;
-  position: absolute;
-  right: 1rem;
+margin: 0px 0.5rem;
+
 }
 .c1{
   margin-top: 5rem;
@@ -45,6 +33,9 @@ Nav button{
 {
   width: 80%;
   margin-top: 5rem;
+}
+.c2{
+  justify-content: flex-end;
 }
 .para1
 {
@@ -64,15 +55,36 @@ Button{
   background-color: orange !important;
   transition: background-color linear 500ms !important;
   transition: outline-offset 250ms ease !important;
-  outline: 2px solid orange !important;
-  border-radius: 0px !important;
+  
   border: none !important;
 }
+#register
+{
+  width: 5rem !important;
+  margin: 0px 0.5rem;
+}
+#btn1{
+
+  border-radius: 5rem !important;
+  border: none !important;
+  width: 15rem;
+  height: 3rem;
+  font-size: 1.33rem !important;
+}
+
 Button:hover{
   
-
-  outline-offset: 2px !important;
-}
-Button:focus{
   background-color: darkorange !important;
+  
+}
+
+@media only screen and (max-width: 990px){
+  .c3{
+    position: absolute;
+    right: 1rem;
+  }
+  #hlink,#register
+  {
+    margin: 0.5rem 0rem;
+  }
 }

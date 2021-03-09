@@ -18,8 +18,8 @@ function Login()
      <Navbar expand="lg">
   <Navbar.Brand id="navlogo" href="#home">Duolouge</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
-  <Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="mr-auto">
+  <Navbar.Collapse className="c2" id="basic-navbar-nav">
+    <Nav className="c2 c3">
       <Nav.Link id="hlink" >About Us</Nav.Link>
       <Button id="register" className="btn btn-primary">Sign Up</Button>
      
@@ -34,7 +34,7 @@ function Login()
       <h1 className="text1">Grow.</h1>
       <h1 className="text1">Inspire.</h1>
       <p className="para1">Engage with your friends through a full feature chat integration.</p>
-      <Button className="btn btn-primary">Sign In</Button>
+      <Button id="btn1" className="btn btn-primary">Sign In</Button>
     </div>
   </Col>
   {/* <Col className="col-md-6">
