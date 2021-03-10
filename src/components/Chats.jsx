@@ -8,7 +8,7 @@ import "../App.css";
 const date = new Date();
 let AMPM = "am";
 let hr = date.getHours();
-let min;
+let min=date.getMinutes();
 if (date.getHours() > 12) {
   AMPM = "pm";
   hr = date.getHours() - 12;

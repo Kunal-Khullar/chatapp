@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 .App {
     padding: 1rem;
     z-index: 10;
@@ -111,7 +112,7 @@ Button:hover {
     justify-content: space-between;
     font-size: 1.5rem;
     padding: 1rem;
-    background-color: gainsboro;
+    background-color: #f1d566;
     /* border-top-left-radius: 1rem; */
 }
 
@@ -195,7 +196,7 @@ Button:hover {
     /* padding: 1.5rem; */
     flex: 1;
     border-right: 1px solid cadetblue;
-    /* background-image: url("https://i.pinimg.com/originals/85/70/f6/8570f6339d3189c96e340d47a581d3b8.jpg"); */
+    background-image: url("https://images.unsplash.com/photo-1516541196182-6bdb0516ed27?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8cGF0dGVybnxlbnwwfHwwfHdoaXRl&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -205,6 +206,7 @@ Button:hover {
     display: flex;
     flex-direction: column;
     flex: 1;
+    padding-top: 1.3rem;
 }
 
 .chats .MuiSvgIcon-root {
@@ -214,19 +216,26 @@ Button:hover {
 .chat_content {
     margin: 0.7rem 0rem;
     display: flex;
-    background-color: #a19494;
+    background-color: #e7ecf0;
     width: fit-content;
-    padding: 0.13rem;
-    border-radius: 0.3rem;
+    padding: 0.13rem 0.4rem;
+    border-radius: 0.4rem;
 }
 
 .chatting {
-    margin: 0.7rem 0.5rem;
+    margin: 0.9rem 2.5rem;
     width: fit-content;
 }
 
 .chatting h6 {
     line-height: 0.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 0.7rem;
+}
+
+.chat_content p {
+    font-size: 1.2rem;
 }
 
 .reciever {
@@ -234,14 +243,14 @@ Button:hover {
 }
 
 .reciever .chat_content {
-    background-color: #5499C7;
+    background-color: #F4D03F;
 }
 
 .chat_content .time_stamp {
     position: relative;
-    top: 80%;
+    top: 75%;
     font-size: 0.7rem;
-    color: #ccc;
+    color: #a29898;
 }
 
 .Chat_section .chat_footer {
@@ -251,15 +260,17 @@ Button:hover {
     position: sticky;
     top: 64%;
     padding: 0.5rem;
-    margin: 0.2rem 0.5rem;
+    margin: 0.2rem 0rem;
     border: 1px solid gainsboro;
+    background-color: #f1f1f1;
 }
 
 .chat_footer input {
     border: none;
     width: 100%;
     border-radius: 0.3rem;
-    margin-left: 0.1rem;
+    margin: 0.1rem 0.4rem;
+    padding: 0.4rem;
 }
 
 .chat_footer .MuiSvgIcon-root {
@@ -268,17 +279,17 @@ Button:hover {
 }
 
 .chat_footer .MuiIconButton-root .MuiSvgIcon-root {
-    color: rgb(226, 226, 229);
+    color: rgb(238, 237, 237);
 }
 
 .chat_footer .MuiIconButton-root {
-    background-color: #2980B9 !important;
+    background-color: #F4D03F !important;
     padding: 0.9%;
     margin-left: 0.4rem;
 }
 
 .chat_footer .MuiIconButton-root:hover {
-    background-color: #5499C7 !important;
+    background-color: #F7DC6F !important;
 }
 
 @media only screen and (max-width:1390px) {

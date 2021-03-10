@@ -14,7 +14,7 @@ function Sidebar() {
         </div>
         <div className="info">
           <p>Jerry Wilson</p>
-          <p className="job">UI Designer</p>
+          <p className="job">jerry@gmail.com</p>
         </div>
         <div className="settings">
           <SettingsIcon />
