@@ -1,90 +1,302 @@
-
-.App
-{
-  padding: 1rem ;
-
-  z-index: 10;
-
+.App {
+    padding: 1rem;
+    z-index: 10;
 }
- 
+
 #myVideo {
-  position: fixed;
-  right: 0;
-  z-index: -1;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-#navlogo
-{
-  color: #eeeeee;
-}
-#hlink{color: #fef  !important;
-font-size: 1.2rem;
-margin: 0px 0.5rem;
-
-}
-.c1{
-  margin-top: 5rem;
-  margin-left: 10rem;
-  padding: 0.5rem;
-}
-#img1
-{
-  width: 80%;
-  margin-top: 5rem;
-}
-.c2{
-  justify-content: flex-end;
-}
-.para1
-{
-  color: #ccc;
-  font-weight: 350;
-  padding-top: 2rem;
-  margin: 1rem 0rem;
-  padding-bottom: 2rem
-}
-.text1{
-  color:#fefefe;
-  font-weight: 800;
-  font-size: 5rem;
-  line-height: 4.5rem;
-}
-Button{
-  background-color: orange !important;
-  transition: background-color linear 500ms !important;
-  transition: outline-offset 250ms ease !important;
-  
-  border: none !important;
-}
-#register
-{
-  width: 5rem !important;
-  margin: 0px 0.5rem;
-}
-#btn1{
-
-  border-radius: 5rem !important;
-  border: none !important;
-  width: 15rem;
-  height: 3rem;
-  font-size: 1.33rem !important;
+    position: fixed;
+    right: 0;
+    z-index: -1;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
 
-Button:hover{
-  
-  background-color: darkorange !important;
-  
+#navlogo {
+    color: #eeeeee;
 }
 
-@media only screen and (max-width: 990px){
-  .c3{
-    position: absolute;
-    right: 1rem;
-  }
-  #hlink,#register
-  {
-    margin: 0.5rem 0rem;
-  }
+#hlink {
+    color: #fef !important;
+    font-size: 1.2rem;
+    margin: 0px 0.5rem;
+}
+
+.c1 {
+    margin-top: 5rem;
+    margin-left: 10rem;
+    padding: 0.5rem;
+}
+
+#img1 {
+    width: 80%;
+    margin-top: 5rem;
+}
+
+.c2 {
+    justify-content: flex-end;
+}
+
+.para1 {
+    color: #ccc;
+    font-weight: 350;
+    padding-top: 2rem;
+    margin: 1rem 0rem;
+    padding-bottom: 2rem
+}
+
+.text1 {
+    color: #fefefe;
+    font-weight: 800;
+    font-size: 5rem;
+    line-height: 4.5rem;
+}
+
+Button {
+    background-color: orange !important;
+    transition: background-color linear 500ms !important;
+    transition: outline-offset 250ms ease !important;
+    border: none !important;
+}
+
+#register {
+    width: 5rem !important;
+    margin: 0px 0.5rem;
+}
+
+#btn1 {
+    border-radius: 5rem !important;
+    border: none !important;
+    width: 15rem;
+    height: 3rem;
+    font-size: 1.33rem !important;
+}
+
+Button:hover {
+    background-color: darkorange !important;
+}
+
+
+/*------------------ HOME PAGE ----------*/
+
+#app_body {
+    /* background-image: url("https://image.freepik.com/free-photo/pastel-tone-purple-pink-blue-gradient-background_49683-3955.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+    background-color: white;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.box {
+    background-color: #fdfdfd;
+    display: flex;
+    width: 100%;
+    height: 99vh;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    /* box-shadow: -1px 4px 15px -6px rgb(75, 74, 74); */
+}
+
+.sidebar {
+    flex: 0.41;
+    border-right: 1px solid gainsboro;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    padding: 1rem;
+    background-color: gainsboro;
+    /* border-top-left-radius: 1rem; */
+}
+
+.info {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.info p {
+    margin-bottom: 0rem;
+}
+
+.info .job {
+    margin-top: -0.2rem;
+    font-weight: 100;
+}
+
+.settings .MuiSvgIcon-root {
+    font-size: 1.3rem !important;
+    color: rgb(95, 94, 94);
+}
+
+.MuiSvgIcon-root {
+    font-size: 2rem !important;
+}
+
+#search_bar {
+    display: flex;
+    padding: 0.2rem;
+    margin: 0.4rem 1rem;
+    border: 1.5px solid gainsboro;
+    align-items: center;
+    border-radius: 0.3rem;
+}
+
+#search_bar .MuiSvgIcon-root {
+    font-size: 1.4rem !important;
+}
+
+#search_bar input {
+    border: none;
+    border-radius: 0.3rem;
+}
+
+#search_bar input:hover {
+    border: none;
+}
+
+.sidebar h6 {
+    margin-left: 1rem;
+}
+
+.Allchats {
+    display: flex;
+    padding: 0.5rem;
+    background-color: white;
+    border-bottom: 1px solid gainsboro;
+}
+
+.Allchats:hover {
+    cursor: pointer;
+    background-color: rgba(204, 204, 204, 0.609);
+}
+
+.Allchats h6 {
+    font-size: 1rem;
+    margin-bottom: 0rem;
+    margin-left: 1rem;
+}
+
+.Allchats .face {
+    font-size: 1rem !important;
+}
+
+.Allchats .sidechat {
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.Chat_section {
+    /* padding: 1.5rem; */
+    flex: 1;
+    border-right: 1px solid cadetblue;
+    /* background-image: url("https://i.pinimg.com/originals/85/70/f6/8570f6339d3189c96e340d47a581d3b8.jpg"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.chats {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.chats .MuiSvgIcon-root {
+    font-size: 1rem !important;
+}
+
+.chat_content {
+    margin: 0.7rem 0rem;
+    display: flex;
+    background-color: #a19494;
+    width: fit-content;
+    padding: 0.13rem;
+    border-radius: 0.3rem;
+}
+
+.chatting {
+    margin: 0.7rem 0.5rem;
+    width: fit-content;
+}
+
+.chatting h6 {
+    line-height: 0.2rem;
+}
+
+.reciever {
+    margin-left: auto;
+}
+
+.reciever .chat_content {
+    background-color: #5499C7;
+}
+
+.chat_content .time_stamp {
+    position: relative;
+    top: 80%;
+    font-size: 0.7rem;
+    color: #ccc;
+}
+
+.Chat_section .chat_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 64%;
+    padding: 0.5rem;
+    margin: 0.2rem 0.5rem;
+    border: 1px solid gainsboro;
+}
+
+.chat_footer input {
+    border: none;
+    width: 100%;
+    border-radius: 0.3rem;
+    margin-left: 0.1rem;
+}
+
+.chat_footer .MuiSvgIcon-root {
+    color: rgb(92, 92, 104);
+    font-size: 1.3rem !important;
+}
+
+.chat_footer .MuiIconButton-root .MuiSvgIcon-root {
+    color: rgb(226, 226, 229);
+}
+
+.chat_footer .MuiIconButton-root {
+    background-color: #2980B9 !important;
+    padding: 0.9%;
+    margin-left: 0.4rem;
+}
+
+.chat_footer .MuiIconButton-root:hover {
+    background-color: #5499C7 !important;
+}
+
+@media only screen and (max-width:1390px) {
+    .Chat_section .chat_footer {
+        top: 100%;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .c3 {
+        position: absolute;
+        right: 1rem;
+    }
+    #hlink,
+    #register {
+        margin: 0.5rem 0rem;
+    }
+    .sidebar {
+        flex: 0.15;
+    }
 }
