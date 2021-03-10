@@ -29,6 +29,9 @@ margin: 0px 0.5rem;
   margin-left: 10rem;
   padding: 0.5rem;
 }
+.c3{
+  padding: 0.7rem;
+}
 #img1
 {
   width: 80%;
@@ -50,6 +53,63 @@ margin: 0px 0.5rem;
   font-weight: 800;
   font-size: 5rem;
   line-height: 4.5rem;
+}
+#btn2{
+  background: #4950a1 !important;
+  width: 8rem;
+  border-radius: 2rem;
+  height: 2.8rem;
+}
+#btn3{
+  background: #4d6afe !important;
+  width: 12rem;
+  border-radius: 2rem;
+  height: 2.8rem;
+}
+#btn3:hover{
+  background-color: #feb950 !important;
+  color: #546efe !important;
+}
+#navreg
+{
+  color: #4951a1 !important;
+}
+#navreg:hover{
+  color: #111111 !important;
+}
+.para2{
+  text-align: center;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    /* margin-left: 9rem; */
+}
+#btn2:hover{
+  background-color: #eeaa37 !important;
+  color: #4950a1;
+}
+.c4{
+  padding-top: 3rem;
+  background: white;
+}
+.c4 .form-group{
+  margin: 2rem 5rem;
+  /* width: 23.5rem; */
+}
+.c4 form{
+  text-align: center;
+}
+.c4 .form-group input{
+  height: 2.7rem;
+}
+.text2{
+  color:#222;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 2rem;
+  font-size: 4.5rem !important;
+  /* line-height: 4.5rem; */
 }
 Button{
   background-color: orange !important;
@@ -77,6 +137,24 @@ Button:hover{
   background-color: darkorange !important;
   
 }
+#gif2{
+  background: url("https://firebasestorage.googleapis.com/v0/b/duo-louge.appspot.com/o/mygif3.gif?alt=media&token=496d4256-abe7-4ea0-a4bd-570a055122f2") no-repeat center;
+  /* background-size: cover; */
+  height: 35rem;
+}
+#gif4{
+  background: url("https://firebasestorage.googleapis.com/v0/b/duo-louge.appspot.com/o/ezgif.com-gif-maker%20(2).gif?alt=media&token=88e39536-104f-4e0e-9bbc-e2c34a01e397") no-repeat center;
+  height: 35rem;
+  background-size: cover;
+}
+.innerlogin,.innerregister{
+  margin-right: 0px !important;
+  box-shadow: 1px 1px 14px 0.5px #23336e;
+}
+.logindiv,.registerdiv{
+  height: 35rem;
+  margin: 5rem;
+}
 
 @media only screen and (max-width: 990px){
   .c3{
@@ -86,5 +164,8 @@ Button:hover{
   #hlink,#register
   {
     margin: 0.5rem 0rem;
+  }
+  .text1{
+    font-size: 4rem;
   }
 }

@@ -5,8 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background: url("https://firebasestorage.googleapis.com/v0/b/duo-louge.appspot.com/o/ezgif.com-gif-maker%20(1).gif?alt=media&token=bbedb5db-c632-4f2c-ac7a-f45ee3c2ce80") no-repeat; */
-  /* background-size: cover; */
+  background: linear-gradient(to right,#4950a1,#4d6afe);
+  background-size: cover;
   overflow: hidden;
 }
 
