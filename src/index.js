@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
@@ -11,14 +11,8 @@ const client = new ApolloClient({
     uri: "",
     cache: new InMemoryCache(),
 });
-=======
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import $ from 'jquery';
-import reportWebVitals from './reportWebVitals';
->>>>>>> 3e036e5032016d74d092a29c444380ef6f984673
+
+
 
 // client.query({
 //     query: gql ``,
