@@ -6,8 +6,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(to right,#4950a1,#4d6afe);
-
+  
   overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+  display: none;
 }
 
 
