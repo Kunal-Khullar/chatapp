@@ -40,10 +40,10 @@ function Home()
                     </div>
                 </Col>
                 <Col className="col-md-9 messaging">
-                    <h2>Chat</h2>
+                    <h2>All Chats</h2>
                     <Row className="r2">
-                        <Col className="col-lg-6 ">
-                            <div className="allchats">
+                        <Col className="col-lg-5 ">
+                            <div className="allchats" id="style7">
                                 <div className="searchbar">
                                 <FormControl type="text" placeholder="Search" className="mr-sm-2"></FormControl>
                                 <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
@@ -55,13 +55,68 @@ function Home()
                                         </div>
                                         <div className="chatinfo">
                                         <h6>Noob User</h6>
-                                        <p>Most recent message here</p>
+                                        <p className="para3">Most recent message here</p>
+                                    </div>
+                                    </Row>
+                                </div>
+                                <div className="userchats">
+                                    <Row className="r2">
+                                        <div className="userspic">
+                                            <img className="userpic" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="user"/>
+                                        </div>
+                                        <div className="chatinfo">
+                                        <h6>Noob User</h6>
+                                        <p className="para3">Most recent message here</p>
+                                    </div>
+                                    </Row>
+                                </div>
+                                <div className="userchats">
+                                    <Row className="r2">
+                                        <div className="userspic">
+                                            <img className="userpic" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="user"/>
+                                        </div>
+                                        <div className="chatinfo">
+                                        <h6>Noob User</h6>
+                                        <p className="para3">Most recent message here</p>
+                                    </div>
+                                    </Row>
+                                </div>
+                                <div className="userchats">
+                                    <Row className="r2">
+                                        <div className="userspic">
+                                            <img className="userpic" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="user"/>
+                                        </div>
+                                        <div className="chatinfo">
+                                        <h6>Noob User</h6>
+                                        <p className="para3">Most recent message here</p>
+                                    </div>
+                                    </Row>
+                                </div>
+                                <div className="userchats">
+                                    <Row className="r2">
+                                        <div className="userspic">
+                                            <img className="userpic" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="user"/>
+                                        </div>
+                                        <div className="chatinfo">
+                                        <h6>Noob User</h6>
+                                        <p className="para3">Most recent message here</p>
+                                    </div>
+                                    </Row>
+                                </div>
+                                <div className="userchats">
+                                    <Row className="r2">
+                                        <div className="userspic">
+                                            <img className="userpic" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="user"/>
+                                        </div>
+                                        <div className="chatinfo">
+                                        <h6>Noob User</h6>
+                                        <p className="para3">Most recent message here</p>
                                     </div>
                                     </Row>
                                 </div>
                             </div>
                         </Col>
-                        <Col className="col-lg-6">
+                        <Col className="col-lg-7">
                             <div className="currentchat">
 
                             </div>

@@ -318,6 +318,7 @@ height: 100vh;
     margin-top: 6px;
 
 }
+
 .menu{
     padding-left: 0px !important;
     box-shadow: -2.6px 1.6px 1rem -7px #484a78;
@@ -343,34 +344,98 @@ height: 100vh;
     font-size: 1.3rem;
     margin-left: -2.5rem;
     color: #aaa;
+    cursor: pointer;
 }
 .messaging h2{
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-family: system-ui;
     font-weight: 600;
     color: rgba(0,20,100);
     margin-top: 2rem;
-    margin-left: 3rem;
-    margin-bottom: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
 }
 .allchats{
-    margin-left: 3rem;
+    margin-left: 2rem;
+    padding-top: 1rem;
+    padding-left: 2px;
 }
 .userchats{
-    background: #fefefe;
+    cursor: pointer;
+    background: linear-gradient(120deg,#fefefe,#efffff);
     padding: 0.5rem 0.1rem 0rem 1.2rem;
     margin-top: 1.5rem;
     border-radius: 1rem;
-    box-shadow: 0.5px 0.5px 10px -7px;
-    width: 75%;
+    box-shadow: 0.5px 0.5px 10px -7px rgba(0,0,0,150);
+    width: 90%;
+   
+    transition: transform 300ms ease-in-out;
+
+}
+.allchats{
+    overflow-y: scroll;
+    height: 25rem;
+    overflow-x: auto;
+   
+
+        
+      
+}
+.allchats::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+    display: none;
+}
+.para3{
+    
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #aaa;
+    opacity: .9;
+    letter-spacing: 0.3px;
+    margin-top: 12px;
+    margin-bottom: 5px;
+
+}
+.allchats::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+    display: none;
+}
+
+.allchats::-webkit-scrollbar-thumb
+{
+    display: none;
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, rgb(122,153,217)),
+									   color-stop(0.72, rgb(73,125,189)),
+									   color-stop(0.86, rgb(28,58,148)));
+}
+.userchats:hover{
+   
+   box-shadow: 0.6px 0.6px 11px -6px;
+ transform :scale(0.9) ;
+}
+.userchats:focus,.userchats:active{
+    background: #eee;
 }
 .chatinfo{
     padding: 5px 1px 0px 7px
 }
 .userchats .r2 .chatinfo h6{
-    line-height: 1px;
+    color: rgba(54,49,138);
+    margin-top: 3px;
+    line-height: 0px;
     font-size: 15px;
     font-weight: 700;
+    opacity: 0.85;
     font-family: system-ui;
 }
 .userpic{
@@ -381,11 +446,14 @@ height: 100vh;
 .searchbar input{
     height: 2.7rem;
     border-radius: 0.7rem !important;
-    width: 75% !important;
+    width: 90% !important;
     padding: 1rem;
     font-weight: 500;
     border: none;
     box-shadow: 0.5px 0.5px 0.5rem -5px;
+}
+.searchbar input:focus,.searchbar input:active{
+    outline: none !important;
 }
 /* chat end */
 
