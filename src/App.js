@@ -1,7 +1,7 @@
 import "./App.css";
 // import mygif from './mygif.gif';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Login, Home,Signin,Register } from "./components/myjs";
+import { Login,Home, Signin,Register } from "./components/myjs";
 
 function App() {
   return (

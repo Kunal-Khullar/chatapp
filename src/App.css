@@ -80,240 +80,6 @@ Button:hover {
 
 /*------------------ HOME PAGE ----------*/
 
-#app_body {
-    /* background-image: url("https://image.freepik.com/free-photo/pastel-tone-purple-pink-blue-gradient-background_49683-3955.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; */
-    background-color: white;
-    height: 100vh;
-    display: grid;
-    place-items: center;
-}
-
-.box {
-    background-color: #fdfdfd;
-    display: flex;
-    width: 100%;
-    height: 99vh;
-    margin-bottom: 1rem;
-    margin-top: 0;
-    /* box-shadow: -1px 4px 15px -6px rgb(75, 74, 74); */
-}
-
-.sidebar {
-    flex: 0.41;
-    border-right: 1px solid gainsboro;
-}
-
-.header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.5rem;
-    padding: 1rem;
-    background-color: #f1d566;
-    /* border-top-left-radius: 1rem; */
-}
-
-.info {
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-.info p {
-    margin-bottom: 0rem;
-}
-
-.info .job {
-    margin-top: -0.2rem;
-    font-weight: 100;
-}
-
-.settings .MuiSvgIcon-root {
-    font-size: 1.3rem !important;
-    color: rgb(95, 94, 94);
-}
-
-.MuiSvgIcon-root {
-    font-size: 2rem !important;
-}
-
-#search_bar {
-    display: flex;
-    padding: 0.2rem;
-    margin: 0.4rem 1rem;
-    border: 1.5px solid gainsboro;
-    align-items: center;
-    border-radius: 0.3rem;
-}
-
-#search_bar .MuiSvgIcon-root {
-    font-size: 1.4rem !important;
-}
-
-#search_bar input {
-    border: none;
-    border-radius: 0.3rem;
-}
-
-#search_bar input:hover {
-    border: none;
-}
-
-.sidebar h6 {
-    margin-left: 1rem;
-}
-
-.Allchats {
-    display: flex;
-    padding: 0.5rem;
-    background-color: white;
-    border-bottom: 1px solid gainsboro;
-}
-
-.Allchats:hover {
-    cursor: pointer;
-    background-color: rgba(204, 204, 204, 0.609);
-}
-
-.Allchats h6 {
-    font-size: 1rem;
-    margin-bottom: 0rem;
-    margin-left: 1rem;
-}
-
-.Allchats .face {
-    font-size: 1rem !important;
-}
-
-.Allchats .sidechat {
-    font-weight: 400;
-    font-size: 0.8rem;
-}
-
-.Chat_section {
-    /* padding: 1.5rem; */
-    flex: 1;
-    border-right: 1px solid cadetblue;
-    background-image: url("https://images.unsplash.com/photo-1516541196182-6bdb0516ed27?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8cGF0dGVybnxlbnwwfHwwfHdoaXRl&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.chats {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding-top: 1.3rem;
-}
-
-.chats .MuiSvgIcon-root {
-    font-size: 1rem !important;
-}
-
-.chat_content {
-    margin: 0.7rem 0rem;
-    display: flex;
-    background-color: #e7ecf0;
-    width: fit-content;
-    padding: 0.13rem 0.4rem;
-    border-radius: 0.4rem;
-}
-
-.chatting {
-    margin: 0.9rem 2.5rem;
-    width: fit-content;
-}
-
-.chatting h6 {
-    line-height: 0.2rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bolder;
-    font-size: 0.7rem;
-}
-
-.chat_content p {
-    font-size: 1.2rem;
-}
-
-.reciever {
-    margin-left: auto;
-}
-
-.reciever .chat_content {
-    background-color: #F4D03F;
-}
-
-.chat_content .time_stamp {
-    position: relative;
-    top: 75%;
-    font-size: 0.7rem;
-    color: #a29898;
-}
-
-.Chat_section .chat_footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 64%;
-    padding: 0.5rem;
-    margin: 0.2rem 0rem;
-    border: 1px solid gainsboro;
-    background-color: #f1f1f1;
-}
-
-.chat_footer input {
-    border: none;
-    width: 100%;
-    border-radius: 0.3rem;
-    margin: 0.1rem 0.4rem;
-    padding: 0.4rem;
-}
-
-.chat_footer .MuiSvgIcon-root {
-    color: rgb(92, 92, 104);
-    font-size: 1.3rem !important;
-}
-
-.chat_footer .MuiIconButton-root .MuiSvgIcon-root {
-    color: rgb(238, 237, 237);
-}
-
-.chat_footer .MuiIconButton-root {
-    background-color: #F4D03F !important;
-    padding: 0.9%;
-    margin-left: 0.4rem;
-}
-
-.chat_footer .MuiIconButton-root:hover {
-    background-color: #F7DC6F !important;
-}
-
-@media only screen and (max-width:1390px) {
-    .Chat_section .chat_footer {
-        top: 100%;
-    }
-}
-
-@media only screen and (max-width: 990px) {
-    .c3 {
-        position: absolute;
-        right: 1rem;
-    }
-    #hlink,
-    #register {
-        margin: 0.5rem 0rem;
-    }
-    .sidebar {
-        flex: 0.15;
-    }
-}
-
-
-/*============*/
 
 #myVideo {
     position: fixed;
@@ -482,6 +248,151 @@ Button:hover {
 .registerdiv {
     height: 35rem;
     margin: 5rem;
+}
+/* Home and chats */
+.maincontainer{
+    padding: 5rem 7rem;
+    background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+height: 100vh;
+}
+.innercontainer{
+    
+    height: 34rem;
+}
+.userphoto{
+    font-size: 3rem;
+    color: #EEE;
+    filter: drop-shadow(0px 3px 3px #234);
+}
+.userinfo{
+    margin-top: 2rem;
+    padding: 1rem 0.1rem 1rem 0rem;
+    text-align: center;
+    margin-left: -2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+.messaging{
+    border-radius: 2rem;
+    background: linear-gradient(to bottom, #fefefe,#d5dcf4);
+    /* z-index: 1000000; */
+    margin-left: -2rem;
+    box-shadow: 2.6px 1.6px 1rem -7px #484a78;
+}
+.r1{
+    padding: 0.5rem 0rem;
+    align-items: center;
+}
+.menuoptions{
+    padding: 1rem;
+}
+.option{
+    /* padding-left: 1rem; */
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+.r1:hover{
+    background: rgba(189,156,235, 0.5)
+
+}
+.optionicon
+{
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: #eee;
+    margin-right: 1rem;
+    opacity: 63%;
+    padding-top: 0px;
+}
+.optiontag
+{
+    
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: monospace;
+    letter-spacing: 1px;
+    color: #fefefe;
+    opacity: 65%;
+    margin-top: 6px;
+
+}
+.menu{
+    padding-left: 0px !important;
+    box-shadow: -2.6px 1.6px 1rem -7px #484a78;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    background-image: linear-gradient( to bottom,  #9c67e5cf, rgba(125,89,252,1) 91.1% );
+}
+.userNames{
+    padding-top: 1rem;
+    color: #fefefe;
+    font-family: monospace;
+    letter-spacing: 0px;
+    filter: drop-shadow(1px 1px 2px #9c67e5cf);
+
+}
+/* home end */
+/* Chats */
+.searchbar{
+    display: flex;
+    align-items: center;
+}
+.searchbar svg{
+    font-size: 1.3rem;
+    margin-left: -2.5rem;
+    color: #aaa;
+}
+.messaging h2{
+    font-size: 2rem;
+    font-family: system-ui;
+    font-weight: 600;
+    color: rgba(0,20,100);
+    margin-top: 2rem;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+}
+.allchats{
+    margin-left: 3rem;
+}
+.userchats{
+    background: #fefefe;
+    padding: 0.5rem 0.1rem 0rem 1.2rem;
+    margin-top: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0.5px 0.5px 10px -7px;
+    width: 75%;
+}
+.chatinfo{
+    padding: 5px 1px 0px 7px
+}
+.userchats .r2 .chatinfo h6{
+    line-height: 1px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: system-ui;
+}
+.userpic{
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+}
+.searchbar input{
+    height: 2.7rem;
+    border-radius: 0.7rem !important;
+    width: 75% !important;
+    padding: 1rem;
+    font-weight: 500;
+    border: none;
+    box-shadow: 0.5px 0.5px 0.5rem -5px;
+}
+/* chat end */
+
+@media only screen and (max-width:1030px){
+    .maincontainer{
+        padding: 2.5rem 7rem;
+    }
 }
 
 @media only screen and (max-width: 990px) {
