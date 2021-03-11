@@ -360,7 +360,7 @@ height: 100vh;
     padding-top: 1rem;
     padding-left: 2px;
 }
-.userchats{
+.userchats,.currentuserchats{
     cursor: pointer;
     background: linear-gradient(120deg,#fefefe,#efffff);
     padding: 0.5rem 0.1rem 0rem 1.2rem;
@@ -371,6 +371,31 @@ height: 100vh;
    
     transition: transform 300ms ease-in-out;
 
+    
+}
+.currentuserchats .r3{
+    align-items: center;
+    padding-left: 15px;
+}
+.currentuserchats .r3 h6{
+    font-size: 20px;
+    margin-left: 5px;
+}
+.status{
+    height: 0.6rem;
+    position: absolute;
+    left: 12rem;
+    width: 0.6rem;
+    background: green;
+    border-radius: 50%;
+}
+.currentuserchats{
+    padding-left:1rem ;
+    padding-bottom: 5px;
+    width: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: transparent;
 }
 .allchats{
     overflow-y: scroll;
@@ -454,6 +479,74 @@ height: 100vh;
 }
 .searchbar input:focus,.searchbar input:active{
     outline: none !important;
+}
+.currentchat{
+    background: #f2f5fc;
+    height: 30rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 7px -6px;
+}
+.typemessage{
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    width: 100%;
+}
+.typemessage .row{
+    width: 100%;
+    padding: 0rem 1rem;
+    align-items: center;
+}
+.messages{
+    background: #fff;
+    height: 22rem;
+    padding: .8rem;
+}
+.sent{
+    color: white;
+    height: auto;
+    width: max-content;
+    background: #6b1aff;
+    padding: 0.7rem;
+    border-radius: 5px;
+    float: right;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.recieved{
+    max-width: 10rem;
+    height: auto;
+    background: #eef2fd;
+    padding: 0.7rem;
+    width: fit-content;
+    border-radius: 5px;
+    float: left;
+    /* margin-top: 2rem; */
+    margin-bottom: 2rem;
+}
+.typemessage .row svg{
+    font-size: 30px;
+    margin: 10px;
+    color: #9e8bf0;
+    cursor: pointer;
+}
+.typemessage textarea{
+    width: 85%;
+    margin-top: 0px;
+    padding-top: 0.8rem;
+    text-align: justify;
+    margin-bottom: 0px;
+    height: 50px;
+    border: none;
+    resize: none;
+    box-shadow: 1px 1px 10px 1px #e0e4f0;
+    border-radius: 0.7rem;
+
+}
+.c5{
+    margin-top: -5rem;
+    
+    
 }
 /* chat end */
 
