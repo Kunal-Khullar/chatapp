@@ -1,10 +1,16 @@
 import React,{useState} from "react";
-import { Col,Row,Form,Button,FormControl } from "react-bootstrap";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Col,Row} from "react-bootstrap";
+import {Route,HashRouter} from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Allchats from './Allchats';
+import Finduser from './Finduser';
 import { faUserCircle,faCog,faCommentAlt,faSearch,faPowerOff,faSmileBeam,faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+import { from } from "@apollo/client";
+import { NavLink } from "react-router-dom";
 function Home()
 {
     return (
+        <HashRouter>
        <div className="maincontainer">
            <Row className="innercontainer">
                 <Col className="menu col-md-3">
@@ -16,13 +22,13 @@ function Home()
                         <div className="option">
                             <Row className="r1">
                                 <FontAwesomeIcon className="optionicon" icon={faSearch}></FontAwesomeIcon>
-                                <h5 className="optiontag">Find</h5>
+                                <NavLink exact to="/finduser"><h5 className="optiontag">Find</h5></NavLink>
                             </Row>
                         </div>
                         <div className="option">
                             <Row  className="r1">
                                 <FontAwesomeIcon className="optionicon" icon={faCommentAlt}></FontAwesomeIcon>
-                                <h5 className="optiontag">Chats</h5>
+                                <NavLink exact to="/allchats"><h5 className="optiontag">Chats</h5></NavLink>
                             </Row>
                         </div>
                         <div className="option">
@@ -40,103 +46,13 @@ function Home()
                     </div>
                 </Col>
                 <Col className="col-md-9 messaging">
-                    <h2>All Chats</h2>
-                    <Row className="r2">
-                        <Col className="col-lg-5 ">
-                            <div className="allchats" id="style7">
-                                <div className="searchbar">
-                                <FormControl type="text" placeholder="Search" className="mr-sm-2"></FormControl>
-                                <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
-                                </div>
-                                <div className="userchats">
-                                    <Row className="r2">
-                                        <div className="userspic">
-                                            <img className="userpic" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="user"/>
-                                        </div>
-                                        <div className="chatinfo">
-                                        <h6>Noob User</h6>
-                                        <p className="para3">Most recent message here</p>
-                                    </div>
-                                    </Row>
-                                </div>
-                                <div className="userchats">
-                                    <Row className="r2">
-                                        <div className="userspic">
-                                            <img className="userpic" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="user"/>
-                                        </div>
-                                        <div className="chatinfo">
-                                        <h6>Noob User</h6>
-                                        <p className="para3">Most recent message here</p>
-                                    </div>
-                                    </Row>
-                                </div>
-                                <div className="userchats">
-                                    <Row className="r2">
-                                        <div className="userspic">
-                                            <img className="userpic" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="user"/>
-                                        </div>
-                                        <div className="chatinfo">
-                                        <h6>Noob User</h6>
-                                        <p className="para3">Most recent message here</p>
-                                    </div>
-                                    </Row>
-                                </div>
-                                <div className="userchats">
-                                    <Row className="r2">
-                                        <div className="userspic">
-                                            <img className="userpic" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="user"/>
-                                        </div>
-                                        <div className="chatinfo">
-                                        <h6>Noob User</h6>
-                                        <p className="para3">Most recent message here</p>
-                                    </div>
-                                    </Row>
-                                </div>
-                                <div className="userchats">
-                                    <Row className="r2">
-                                        <div className="userspic">
-                                            <img className="userpic" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="user"/>
-                                        </div>
-                                        <div className="chatinfo">
-                                        <h6>Noob User</h6>
-                                        <p className="para3">Most recent message here</p>
-                                    </div>
-                                    </Row>
-                                </div>
-                             
-                            </div>
-                        </Col>
-                        <Col className="col-lg-7 c5">
-                            <div className="currentchat">
-                            <div className="currentuserchats">
-                                    <Row className="r3">
-                                        <div className="userspic">
-                                            <img className="userpic" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="user"/>
-                                        </div>
-                                        <div className="chatinfo">
-                                        <h6>Noob User</h6>
-                                        
-                                    </div>
-                                    <div className="status"></div>
-                                    </Row>
-                                </div>
-                                <div className="messages">
-                                    <div className="recieved">Hello</div>
-                                    <div className="sent">Hello noob</div>
-                                </div>
-                                <div className="typemessage ">
-                                    <Row>
-                                <FormControl as="textarea" placeholder="Enter your message" aria-label="With textarea" />
-                             
-                                <FontAwesomeIcon icon={faPaperPlane}></FontAwesomeIcon>
-                                </Row>
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
+                  <Route exact path="/allchats" component={Allchats}></Route>
+                  <Route exact path="/finduser" component={Finduser}></Route>
+                  
                 </Col>
            </Row>
        </div>
+       </HashRouter>
     );
 }
 

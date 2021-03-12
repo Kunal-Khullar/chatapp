@@ -467,6 +467,8 @@ height: 100vh;
     height: 2.5rem;
     width: 2.5rem;
     border-radius: 50%;
+    border: 1px solid gray;
+    background-clip: content-box;
 }
 .searchbar input{
     height: 2.7rem;
@@ -529,6 +531,10 @@ height: 100vh;
     margin: 10px;
     color: #9e8bf0;
     cursor: pointer;
+}
+.typemessage .row svg:hover{
+    color: indigo;
+    opacity: 0.9;
 }
 .typemessage textarea{
     width: 85%;
