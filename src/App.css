@@ -346,6 +346,12 @@ height: 100vh;
     color: #aaa;
     cursor: pointer;
 }
+.innerimg img{
+    height: 4.5rem;
+    margin: 0.5rem;
+    border-radius: 50%;
+    width: 4.5rem;
+}
 .messaging h2{
     font-size: 2.5rem;
     font-family: system-ui;
@@ -536,6 +542,9 @@ height: 100vh;
     color: indigo;
     opacity: 0.9;
 }
+.menuoptions a:hover{
+    text-decoration: none;
+}
 .typemessage textarea{
     width: 85%;
     margin-top: 0px;
@@ -548,6 +557,119 @@ height: 100vh;
     box-shadow: 1px 1px 10px 1px #e0e4f0;
     border-radius: 0.7rem;
 
+}
+.changephoto .row{
+    align-items: center;
+}
+.changephoto h6{
+    font-size: 1.1rem !important;
+    font-weight: 700;
+    font-family: system-ui;
+    padding: .3rem;
+}
+.changephoto{
+    margin-left: 2rem;
+    border-bottom: 2px solid #daece1;
+    padding-bottom: 10px;
+    padding-left: 1rem;
+}
+.details1{
+    margin-left: 2rem;
+    padding: 1rem;
+    border-bottom: 2px solid #d1e0d7;
+}
+.details1 h6{
+    font-weight: 700;
+}
+.takename{
+    margin-right: 2rem;
+}
+.parent2{
+    overflow-y: scroll;
+    height: 33rem;
+}
+.details1 p{
+    font-size: 0.8rem;
+    color: #999;
+    font-family: serif;
+    font-weight: 600;
+    opacity: 0.9;
+}
+#mybtn3{
+    margin-left: 10rem;
+    width: auto !important;
+    background: transparent !important;
+    color: #999 !important;
+    font-weight: 700;
+    margin-top: -2rem;
+    transition: transform 200ms ease !important;
+}
+#mybtn4{
+    width: 12rem !important;
+    height: 2.5rem !important;
+    margin-left: 33rem;
+    transition: transform 300ms ease-in-out !important;
+}
+#mybtn4:hover{
+    transform: scale(1.1);
+}
+#myrow1{
+    align-items: center;
+    border-bottom: 2px solid #d1e0d7;
+    margin-left: 2rem;
+}
+#myrow1 .details1{
+    border: none;
+    margin-left: 0px;
+}
+#myrow1 .col{
+    padding-left: 0px;
+}
+#mybtn3:hover{
+    color: #4950a1 !important;
+    transform: scale(1.1);
+}
+.parent2::-webkit-scrollbar{
+    display: none;
+}
+.takename input{
+    width: 80%;
+    box-shadow: 0.5px 0.5px 6px -4px;
+    background: rgba(255,255,255,0.7    );
+    border-radius: .6rem;
+}
+
+.takegender select{
+    width: 40%;
+    box-shadow: 0.5px 0.5px 6px -4px;
+    background: rgba(255,255,255,0.7    );
+    border-radius: .6rem;
+}
+.btn6{
+    width: 6rem;
+    border-radius: 0.7rem;
+    height: 2.3rem;
+    margin: 0.5rem 0.3rem;
+    background: #fefefe !important;
+    font-weight: bold;
+    color: #4951a1;
+    transition: background-color 500ms linear !important;
+    box-shadow: 0.7px 0.7px 7px -5px #222;
+}
+#mybtn1{
+    color: #aaa !important;
+}
+#mybtn1:hover{
+    color: white !important;
+}
+.btn6:hover{
+    color: white;
+    background-color: #9e8bf0 !important;
+    
+    
+}
+.btn6:focus{
+    color: #4951a1 !important;
 }
 .c5{
     margin-top: -5rem;
