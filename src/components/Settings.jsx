@@ -2,12 +2,29 @@ import React,{useState} from "react";
 import { Col,Row,Form,Button,FormControl } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function Settings()
-{
+{    
+   
+    const[userName,setname] = useState("");
+    const[email,setEmail] = useState("");
+    const [phone,setPhone] = useState("");
+    const[state,setState] = useState("");
+    const[city,setCity] = useState("");
+    const[Name,setName]  = useState("test1");
+    const savedata = (e)=>{
+        e.preventDefault();
+         setName(userName);
+         console.log(userName);
+         console.log(email);
+         console.log(phone);
+         console.log(state);
+         console.log(city);
+        
+    }
     return(
         <div className="parent2">
         <h2>Settings</h2>
         <div className="changephoto">
-        <h6>Avatar</h6>
+        <h6>{Name}</h6>
             <Row>
                 
                 <div className="innerimg">
@@ -22,7 +39,7 @@ function Settings()
                 <Col className="col-md-6">
                 <div className="takename">
                     <h6>Username</h6>
-                    <FormControl placeholder="Current Username" type="text"></FormControl>
+                    <FormControl placeholder="Current Username" type="text"value ={userName} onChange={(e)=>{setname(e.target.value)}} ></FormControl>
                 </div>
                 </Col>
                 <Col className="col-md-6">
@@ -50,13 +67,13 @@ function Settings()
                 <Col className="col-md-6">
                 <div className="takename">
                     <h6>Email</h6>
-                    <FormControl placeholder="currentemail@gmail.com" type="email"></FormControl>
+                    <FormControl placeholder="currentemail@gmail.com" type="email" value={email} onChange={(e)=>{setEmail(e.target.value)}}></FormControl>
                 </div>
                 </Col>
                 <Col className="col-md-6">
                 <div className="takename">
                 <h6>Phone Number</h6>
-                    <FormControl placeholder="000000000" type="text"></FormControl>
+                    <FormControl placeholder="000000000" type="text"value={phone} onChange={(e)=>{setPhone(e.target.value)}}></FormControl>
                 </div>
                 </Col>
             </Row>
@@ -66,13 +83,13 @@ function Settings()
                 <Col className="col-md-6">
                 <div className="takename">
                     <h6>State</h6>
-                    <FormControl placeholder="Current state" type="text"></FormControl>
+                    <FormControl placeholder="Current state" type="text" value={state} onChange={(e)=>{setState(e.target.value)}}></FormControl>
                 </div>
                 </Col>
                 <Col className="col-md-6">
                 <div className="takename">
                 <h6>City</h6>
-                    <FormControl placeholder="Current city" type="text"></FormControl>
+                    <FormControl placeholder="Current city" type="text" value={city} onChange={(e)=>{setCity(e.target.value)}}></FormControl>
                 </div>
                 </Col>
             </Row>
@@ -89,7 +106,7 @@ function Settings()
             </Col>
         </Row>
         <div className="details1">
-        <Button type="button" className="btn6   " id="mybtn4">SAVE CHANGES</Button>
+        <Button type="button" className="btn6   " id="mybtn4" onClick ={savedata}>SAVE CHANGES </Button>
         </div>
 </div>
     );
