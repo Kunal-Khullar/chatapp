@@ -3,7 +3,7 @@ import { Col, Row, Form, Button, Nav } from "react-bootstrap";
 
 function Signin() {
   const [username, setUserName] = useState("");
-  const[password,setpassword]= useState("");
+  const [password, setpassword] = useState("");
   const loginUser = (details) => {
     console.log(username);
     console.log(password);
@@ -25,7 +25,12 @@ function Signin() {
             </Form.Group>
 
             <Form.Group controlId="formBasicPassword">
-              <Form.Control type="password" placeholder="Password" value={password} onChange={(val)=>(setpassword(val.target.value))}/>
+              <Form.Control
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(val) => setpassword(val.target.value)}
+              />
             </Form.Group>
 
             <Button variant="primary" id="btn2" type="button">

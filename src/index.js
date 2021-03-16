@@ -1,24 +1,17 @@
-
 import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import App from "./App";
-import { ApolloClient, InMemoryCache } from "@apollo/client";
-import { gql, ApolloProvider } from "@apollo/client";
-
-const client = new ApolloClient({
-    uri: "",
-    cache: new InMemoryCache(),
-});
-
-
+import { ApolloProvider } from "@apollo/client";
+import {client} from './components/graph'
+import { render } from "react-dom";
 
 // client.query({
 //     query: gql ``,
 // }).then(result => { console.log(result) })
 
-ReactDOM.render( < App / > , document.getElementById("root"));
+render(<App />, document.getElementById("root"));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

@@ -26,7 +26,7 @@ function Home()
                                 <h5 className="optiontag">Find</h5>
                             </Row>
                         </div></NavLink>
-                        <NavLink exact to="/allchats"><div className="option">
+                        <NavLink exact to="/"><div className="option">
                             <Row  className="r1">
                                 <FontAwesomeIcon className="optionicon" icon={faCommentAlt}></FontAwesomeIcon>
                                <h5 className="optiontag">Chats</h5>
@@ -48,7 +48,7 @@ function Home()
                 </Col>
                 <Col className="col-md-9 messaging">
                     {/* <Allchats></Allchats> */}
-                  <Route exact path="/allchats" component={Allchats}></Route>
+                  <Route exact path="/" component={Allchats}></Route>
                   <Route exact path="/finduser" component={Finduser}></Route>
                   <Route exact path="/settings" component={Settings}></Route>
                   

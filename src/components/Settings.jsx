@@ -3,7 +3,7 @@ import { Col,Row,Form,Button,FormControl } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function Settings()
 {    
-   
+   const[gender,setGender]=useState("M");
     const[userName,setname] = useState("");
     const[email,setEmail] = useState("");
     const [phone,setPhone] = useState("");
@@ -13,6 +13,7 @@ function Settings()
     const savedata = (e)=>{
         e.preventDefault();
          setName(userName);
+         console.log(gender)
          console.log(userName);
          console.log(email);
          console.log(phone);
@@ -24,7 +25,7 @@ function Settings()
         <div className="parent2">
         <h2>Settings</h2>
         <div className="changephoto">
-        <h6>{Name}</h6>
+        <h6>Avatar</h6>
             <Row>
                 
                 <div className="innerimg">
@@ -48,7 +49,7 @@ function Settings()
                     <Form>
   <Form.Group controlId="exampleForm.SelectCustom">
     
-    <Form.Control as="select" custom>
+    <Form.Control as="select" name="gender" value={gender} onChange={(e)=>{setGender(e.target.value)}} custom>
         
       <option defaultValue value="M">Male</option>
       <option value="F">Female</option>
