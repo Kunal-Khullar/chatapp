@@ -586,6 +586,7 @@ height: 100vh;
 }
 .parent2{
     overflow-y: scroll;
+    overflow-x: hidden;
     height: 33rem;
 }
 .details1 p{
@@ -595,6 +596,7 @@ height: 100vh;
     font-weight: 600;
     opacity: 0.9;
 }
+
 #mybtn3{
     margin-left: 10rem;
     width: auto !important;
@@ -645,7 +647,11 @@ height: 100vh;
     background: rgba(255,255,255,0.7    );
     border-radius: .6rem;
 }
-.btn6{
+#profileimage{
+    padding: 0.4rem 1.2rem ;
+    cursor: pointer;
+}
+.btn6,#profileimage{
     width: 6rem;
     border-radius: 0.7rem;
     height: 2.3rem;
@@ -662,13 +668,13 @@ height: 100vh;
 #mybtn1:hover{
     color: white !important;
 }
-.btn6:hover{
+.btn6:hover,#profileimage:hover{
     color: white;
     background-color: #9e8bf0 !important;
     
     
 }
-.btn6:focus{
+.btn6:focus,#profileimage:focus{
     color: #4951a1 !important;
 }
 .c5{

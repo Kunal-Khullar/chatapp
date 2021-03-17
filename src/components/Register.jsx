@@ -1,68 +1,44 @@
 import React, { useState } from "react";
-import { ApolloProvider } from "@apollo/client";
-import { useMutation } from "@apollo/client";
-// import { render } from "react-dom";
-import axios from 'axios'
-import { Col, Row, Form, Button, Nav } from "react-bootstrap";
-// import { client, Create_User } from "./graph";
 
+import { Col, Row, Form, Button, Nav } from "react-bootstrap";
+
+import {fireapp,firelytics,db,auth} from './firebase'
 function Register() {
-  //     const op="dfadf";
-  //     var query = `
-  //     mutation createuser($uemail: String!,$upassword: String!,$uusername: String!,$ucity:String,$ustate:String,$ucountry:String,$ugender:String,$uimage:String,$uname:String){
-  //       createUser(email: $uemail,password: $upassword,username: $uusername,city:$ucity,state:$ustate,country:$ucountry,gender:$ugender,image:$uimage,name:$uname) {
-  //       __typename
-  //       }
-  //     }
-  //   `
-  //     const proxyurl = "https://cors-anywhere.herokuapp.com/";
-  // const [createUser, { data }] = useMutation(Create_User);
+  fireapp.analytics();
+  
   const [email1, setemail] = useState("");
   const [name1, setname] = useState("");
   const [password1, setpassword] = useState("");
-  const user = (e) => {
+  const user =async (e) => {
     e.preventDefault();
-    axios.post(`https://duolouge-backend.herokuapp.com/graphql/`,{
-      query:`
-      mutation Register($email: String!, $pass: String!, $username: String!) {
-        createUser(email: $email, password: $pass, username: $username) {
-          __typename
-        }
+    if (name1 != "" && email1 != "" && password1 != "") {
+
+      if (password1.length > 5 && email1.includes("@") && email1.includes(".com")) {
+          try {
+              if (await auth.createUserWithEmailAndPassword(email1, password1)) {
+                  db.collection("userprofiles").doc(email1).set({
+                      "name": name1,
+                      "email": email1,
+                      "phone": "",
+                      "gender":"",
+                      "image":"",  
+                      "city":"",
+                      "state":"",
+                      "phone":""
+                  })
+              }
+
+              alert("registered successfully");
+          } catch (err) {
+              alert(err);
+          }
       }
-    `,
-    variables:{
-      email:email1,
-      password:password1,
-      username: name1
-    },
-    headers: {
-      "Access-Control-Allow-Origin": "*" ,
-      "X-Requested-With": "XMLHttpRequest",
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
-      'Authorization': "JWT "// Required for CORS support to work
+  } 
+
+  else
+  {
+      alert("Please enter all the fields")
   }
-    
-    })
-    //         fetch(proxyurl+"duolouge-backend.herokuapp.com/graphql/",{
-
-    //             method: 'POST',
-    //         headers: {
-    //             "X-Requested-With": "XMLHttpRequest",
-    //             'Content-Type': 'application/json',
-    //             'Accept': 'application/json',
-    //             'Authorization': "JWT "
-    //         },
-    //         body: JSON.stringify({
-    //             query,
-    //             variables:{email1,password1,name1,op,op,op,op,op,op}
-    //         })
-    //     }) .then(r => r.json())
-    //     .then(data => console.log('data returned:', data.data));
-
-    // createUser({
-    //   variables: { email: email1, password: password1, username: name1 },
-    // });
   };
 
   return (
