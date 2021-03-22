@@ -1,10 +1,11 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import { Col,Row,Form,Button,FormControl } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { db,storageRef } from "./firebase";
 
 function Settings()
-{    
+{   
+
     var metadata = {
         contentType: 'image/jpeg',
       };
@@ -15,26 +16,30 @@ function Settings()
     const [phone,setPhone] = useState("");
     const[state,setState] = useState("");
     const[city,setCity] = useState("");
-  
-   
-    
-   
+    const[image,setImage] = useState("");
     let chat = [];
+   useEffect(()=>{
     db.collection("userprofiles").doc("kunalkhullar5012@gmail.com").get().then(function(doc){
-        // gp = doc.data().gender;
-        // cp=doc.data().city;
-        // sp=doc.data().state;
-        // ep=doc.data().email;
-        // np=doc.data().name;
-        // pp=doc.data().phone;
+        console.log(doc.data())
+        console.log("noob")
         setGender(doc.data().gender)
         setname(doc.data().name)
         setEmail(doc.data().email)
         setPhone(doc.data().phone)
         setCity(doc.data().city)
         setState(doc.data().state)
+        setImage(doc.data().image)
         chat=doc.data().chats;
     })
+   },[])
+    
+   
+ const deleteImage = () => {
+    db.collection("userprofiles").doc("kunalkhullar5012@gmail.com").update({
+        image:"https://firebasestorage.googleapis.com/v0/b/duo-louge.appspot.com/o/user_default.png?alt=media&token=a27eb92b-8292-4e0c-84d3-5db84b1b18d0"
+    })
+ }
+   
 
     const savedata =async (e)=>{
         e.preventDefault();
@@ -60,16 +65,19 @@ function Settings()
                  console.log(doc.data());
              })
          }
-         await storageRef.child(`images/${fileList[0].name}`).put(fileList[0], metadata);
+         if(fileList.length!=0){
+            await storageRef.child(`images/${fileList[0].name}`).put(fileList[0], metadata);
             storageRef.child(`images/${fileList[0].name}`).getDownloadURL()
             .then(url=>{
                 console.log(url)
                 document.getElementById('displayimage').setAttribute("src",url)
-                db.collection("userprofiles").doc("knalkhullar5012@gmail.com").update({
+                db.collection("userprofiles").doc("kunalkhullar5012@gmail.com").update({
                     image:url
                 })
             })
          
+         }
+       
     }
     return(
         <div className="parent2">
@@ -79,12 +87,12 @@ function Settings()
             <Row>
                 
                 <div className="innerimg">
-                    <img id='displayimage' src="https://firebasestorage.googleapis.com/v0/b/duo-louge.appspot.com/o/user_default.png?alt=media&token=a27eb92b-8292-4e0c-84d3-5db84b1b18d0" alt=""/>
+                    <img id='displayimage' src={image} alt=""/>
                 </div>
                 <input id="uploadedimage" type="file" name="somename"    hidden ></input>
                 <label id="profileimage" htmlFor="uploadedimage">Upload</label>
                 
-                <Button className="btn-secondary btn6" id="mybtn1">Remove</Button>
+                <Button className="btn-secondary btn6"onClick={deleteImage} id="mybtn1">Remove</Button>
             </Row>
         </div>
         <div className="details1">

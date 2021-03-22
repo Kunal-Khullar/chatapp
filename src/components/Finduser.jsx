@@ -4,7 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function Finduser()
 {
     return(
-        <h1>Hello</h1>
+        <Form>
+            <Form.Group controlId="exampleForm.ControlInput1">
+    
+    <Form.Control type="text" placeholder="Search" />
+  </Form.Group>
+        </Form>
     );
 }
 export default Finduser;
