@@ -698,6 +698,7 @@ height: 100vh;
 .searchUsers svg{
     color: #222;opacity: 0.7;
     cursor: pointer;
+    margin-top: 1.7rem;
 }
 /* chat end */
 
