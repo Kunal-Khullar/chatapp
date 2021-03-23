@@ -1,13 +1,13 @@
-import React,{useState} from "react";
+import React,{useState,useEffec} from "react";
 import {usePosition} from "use-position"
 import { Col,Row,Form,Button,FormControl } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {fas, faSearch} from '@fortawesome/free-solid-svg-icons'
-function Finduser()
+ function Finduser()
 {
     const [lat,setLat] = useState("");
     const [long,setLong] = useState("");
-    const getLocation = () => {
+    const getLocation =  () => {
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(showPosition);
         } else {
@@ -20,7 +20,7 @@ function Finduser()
        setLong(position.coords.longitude)
       }
 console.log(lat, long)
-     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=746ba55303fd4d654653e9599fd5c2d4`).then(response =>response.json())
+       fetch(`https://api.opencagedata.com/geocode/v1/json?q=${lat}%2C+${long}&key=efe8f8cf9ec6408f8064758d8fb335d9&pretty=1`).then(response =>response.json())
     .then(data =>{
         console.log(data)
     })
