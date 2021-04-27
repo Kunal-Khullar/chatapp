@@ -12,21 +12,28 @@ function Signin() {
     if(username!=""&&password!="")
     {
         try {
-            if (await auth.signInWithEmailAndPassword(username,password)) {
-                var user = fireapp.auth().currentUser;
-                if (user != null) {
-                    uid = user.email;
-                    localStorage.setItem("currentUser", uid);
-                    // await db.collection(uid).doc("profile").get().then(function(doc) {
-                    //     userName = doc.data().name
-                    //         // userPhone = doc.data().phone
-                    // })
-                    // localStorage.setItem("currUserName",userName); 
-                    
-                    console.log(localStorage.getItem("currentUser"))
-                    history.push("/home")
+          fetch("https://huddle-backend.herokuapp.com/graphql/",{
+            method: "POST",
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              query:`
+              mutation tokenAuth($password:String!,$username:String!){
+                tokenAuth(password:$password,username:$username)
+                {
+                  token
                 }
-            }
+              }
+              `,
+              variables:{password,username}
+            })
+          })
+          .then((res)=>res.json())
+          .then((result)=>{
+            console.log(result)
+          })
+          window.location.href = "/home"
         } catch (error) {
             alert(error)
         }

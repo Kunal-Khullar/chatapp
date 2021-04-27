@@ -18,24 +18,11 @@ function Settings()
     const[city,setCity] = useState("");
     const[image,setImage] = useState("");
     let chat = [];
-   useEffect(()=>{
-    db.collection("userprofiles").doc("kunalkhullar5012@gmail.com").get().then(function(doc){
-        console.log(doc.data())
-        console.log("noob")
-        setGender(doc.data().gender)
-        setname(doc.data().name)
-        setEmail(doc.data().email)
-        setPhone(doc.data().phone)
-        setCity(doc.data().city)
-        setState(doc.data().state)
-        setImage(doc.data().image)
-        chat=doc.data().chats;
-    })
-   },[])
+  
     
    
  const deleteImage = () => {
-    db.collection("userprofiles").doc("kunalkhullar5012@gmail.com").update({
+    db.collection("userprofiles").doc("kunalkhullar1234@gmail.com").update({
         image:"https://firebasestorage.googleapis.com/v0/b/duo-louge.appspot.com/o/user_default.png?alt=media&token=a27eb92b-8292-4e0c-84d3-5db84b1b18d0"
     })
  }
@@ -51,7 +38,7 @@ function Settings()
          console.log(phone);
          console.log(state);
          console.log(city);
-         db.collection("userprofiles").doc("kunalkhullar5012@gmail.com").update({
+         db.collection("userprofiles").doc("kunalkhullar1234@gmail.com").update({
              email:email,
              name:userName,
              gender:gender,

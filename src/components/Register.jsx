@@ -14,24 +14,30 @@ function Register() {
     if (name1 != "" && email1 != "" && password1 != "") {
 
       if (password1.length > 5 && email1.includes("@") && email1.includes(".com")) {
-          try {
-              if (await auth.createUserWithEmailAndPassword(email1, password1)) {
-                  db.collection("userprofiles").doc(email1).set({
-                      "name": name1,
-                      "email": email1,
-                      "phone": "",
-                      "gender":"",
-                      "image":"",  
-                      "city":"",
-                      "state":"",
-                      "phone":""
-                  })
-              }
-
-              alert("registered successfully");
-          } catch (err) {
-              alert(err);
-          }
+          
+              fetch("https://huddle-backend.herokuapp.com/graphql/",{
+                method: "POST",
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                  query:`
+                  mutation createuser($email1:String!, $password1:String!,$name1:String!){
+                    createUser(password:$password1,email:$email1,username:$name1)
+                    {
+                      __typename
+                    }
+                  }
+                  `,
+                  variables:{password1,email1,name1}
+                })
+              })
+              .then((res)=>res.json())
+              .then((result)=>{
+                console.log(result)
+              })
+             
+          
       }
   } 
 
